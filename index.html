@@ -1599,12 +1599,34 @@ footer{
     return out;
   }
 
+  // Code ko prefill message ke ANT mein, apni line par, ek reference ki tarah:
+  //
+  //     Hi, mujhe start karna hai
+  //     (Ref: DQFS)
+  //
+  // PEHLE YE ' #DQFS' THA, AUR WO GALTI THI.
+  //
+  // Ek nanga hash grahak ko kachra dikhta hai -- aur jo kachra dikhta hai wo mita
+  // diya jata hai. Mit gaya to lead aayegi to sahi, par kisi ad se kabhi nahi
+  // judegi, aur uski wajah kahin nahi dikhegi.
+  //
+  // "(Ref: ...)" wahi cheez hai jo har form, har ticket, har order par hoti hai.
+  // Grahak use pehchanta hai, chhedta nahi, aur kabhi-kabhi wapas bhi likh deta
+  // hai. Yani ye sirf dikhne mein behtar nahi -- ye TIKTA zyada hai.
+  //
+  // Invisible (zero-width) wala raasta jaan-boojh kar nahi liya: iOS ka autocorrect
+  // un aksharon ko hata deta hai, aur tab code CHUP-CHAAP gayab ho jata -- code tha
+  // bhi ya nahi, ye bhi kabhi pata na chalta. Is poore kaam ki jad hi chup-chaap
+  // fail hone wali cheezein hain.
+  //
+  // %0A = nayi line, %28/%29 = kosthak, %3A = colon.
   function stampLeadCode() {
     STATE.leadCode = makeLeadCode();
     document.querySelectorAll('a[data-wa="1"]').forEach(function (a) {
       var href = a.getAttribute('href');
-      if (href && href.indexOf('%23') === -1) {
-        a.setAttribute('href', href + '%20%23' + STATE.leadCode);
+      // Dobara lagane se bachna: ek hi <a> par do Ref chipak jate.
+      if (href && href.indexOf('%28Ref') === -1) {
+        a.setAttribute('href', href + '%0A%28Ref%3A%20' + STATE.leadCode + '%29');
       }
     });
   }
