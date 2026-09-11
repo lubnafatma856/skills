@@ -524,6 +524,10 @@ nav.dark{background:rgba(7,5,14,.99)}
   cursor:pointer;
 }
 .swa:active{transform:scale(.88)}
+/* FIX-22: the WhatsApp CTAs are real links now. Anchors bring a
+   default colour and underline with them — strip both so the
+   existing button styling is untouched. */
+a[data-wa="1"]{text-decoration:none;color:#fff;-webkit-tap-highlight-color:transparent}
 .pr{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(34,197,94,.6);animation:prng 2.4s ease-out infinite}
 @keyframes prng{0%{transform:scale(1);opacity:.65}100%{transform:scale(1.82);opacity:0}}
 
@@ -600,18 +604,18 @@ footer{
 <a class="skip-link sr-only" href="#hero">Skip to main content</a>
 
 <!-- ✅ STICKY WA — uses JS handler so pixel fires BEFORE navigation -->
-<div class="swa" role="button" tabindex="0" aria-label="Chat on WhatsApp"
+<a class="swa" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Chat on WhatsApp"
      data-fbq-event="Lead" data-wa="1" data-wa-src="sticky_float_btn">
   <span class="pr" aria-hidden="true"></span>&#x1F4AC;
-</div>
+</a>
 
 <!-- NAV -->
 <nav id="nav" role="navigation">
   <div class="nav-logo" aria-label="Lubna Fatima">&#x2736; Lubna Fatima</div>
-  <div class="nav-cta" role="button" tabindex="0" aria-label="Chat on WhatsApp"
+  <a class="nav-cta" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Chat on WhatsApp"
        data-fbq-event="Lead" data-wa="1" data-wa-src="nav_top_btn">
     &#x1F4AC; WhatsApp Me
-  </div>
+  </a>
 </nav>
 
 <!-- ══════════════════ HERO ══════════════════ -->
@@ -655,10 +659,10 @@ footer{
         </div>
       </div>
       <div class="bww">
-        <div class="btn-wa" role="button" tabindex="0" aria-label="Start your journey on WhatsApp"
+        <a class="btn-wa" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Start your journey on WhatsApp"
              data-fbq-event="Lead" data-wa="1" id="hero-btn" data-wa-src="hero_main_cta">
           &#x1F449; Start Your Journey on WhatsApp
-        </div>
+        </a>
         <p class="rsure">No experience needed &nbsp;&bull;&nbsp; I&#x2019;ll guide you step by step</p>
       </div>
     </div>
@@ -705,10 +709,10 @@ footer{
         <p>Maine khud ek waqt se shuru kiya tha &mdash; bina kisi experience ke. Aaj main uss journey ko aapke saath share karna chahti hoon. &#x2764;&#xFE0F;</p>
         <p class="iquote">You are not alone. I&#x2019;ve been exactly where you are right now.</p>
         <div class="bww" style="margin-top:18px">
-          <div class="btn-wa" role="button" tabindex="0" aria-label="Let's talk on WhatsApp"
+          <a class="btn-wa" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Let's talk on WhatsApp"
                data-fbq-event="Lead" data-wa="1" data-wa-src="intro_lets_talk_btn">
             &#x1F4AC; Let&#x2019;s Talk on WhatsApp
-          </div>
+          </a>
           <p class="rsure">Free to message &nbsp;&bull;&nbsp; I respond personally</p>
         </div>
       </div>
@@ -752,10 +756,10 @@ footer{
           <li><span class="sko">&#x1F4F1;</span>Social Media Growth<span class="ska">&#x203A;</span></li>
         </ul>
         <div class="bww">
-          <div class="btn-wa" role="button" tabindex="0" aria-label="I want to learn this"
+          <a class="btn-wa" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="I want to learn this"
                data-fbq-event="Lead" data-wa="1" data-wa-src="learn_section_btn">
             &#x1F449; I Want To Learn This
-          </div>
+          </a>
           <p class="rsure">Starting from zero is perfectly fine &#x2764;&#xFE0F;</p>
         </div>
       </div>
@@ -819,10 +823,10 @@ footer{
           <span class="apill">&#x1F4AF; Honest Guidance</span>
         </div>
         <div class="bww">
-          <div class="btn-wa" role="button" tabindex="0" aria-label="Message Lubna on WhatsApp"
+          <a class="btn-wa" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Message Lubna on WhatsApp"
                data-fbq-event="Lead" data-wa="1" data-wa-src="about_mentor_btn">
             &#x1F4AC; Message Me on WhatsApp
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -847,10 +851,10 @@ footer{
     </div>
     <div style="text-align:center;margin-top:30px" class="rv">
       <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-        <div class="btn-wa" role="button" tabindex="0" aria-label="Yes I am ready to join"
+        <a class="btn-wa" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Yes I am ready to join"
              data-fbq-event="Lead" data-wa="1" data-wa-src="who_join_btn" style="max-width:350px">
           &#x1F4AC; Yes, I&#x2019;m Ready To Join
-        </div>
+        </a>
         <p class="rsure">Free to message &nbsp;&bull;&nbsp; No commitment needed</p>
       </div>
     </div>
@@ -871,10 +875,10 @@ footer{
         message away. &#x2764;&#xFE0F;
       </p>
       <div class="fgrp">
-        <div class="btn-xl" role="button" tabindex="0" aria-label="Start your journey on WhatsApp"
+        <a class="btn-xl" href="https://wa.me/919315596263?text=Hi%2C%20mujhe%20start%20karna%20hai" aria-label="Start your journey on WhatsApp"
              data-fbq-event="Lead" data-wa="1" id="final-btn" data-wa-src="final_cta_btn">
           &#x1F4AC; Start Your Journey on WhatsApp
-        </div>
+        </a>
         <p class="fnote">No experience needed &nbsp;&bull;&nbsp; I&#x2019;ll guide you step by step &nbsp;&bull;&nbsp; Free to message</p>
       </div>
     </div>
@@ -963,9 +967,31 @@ footer{
   //  CONFIG
   // ═══════════════════════════════════════════════════════════════════
   var CFG = {
-    GAS_URL  : 'https://script.google.com/macros/s/AKfycbzwbvouqGIAKW3O-uAiFPuvn06gSQXhTTyJGqxUuya626_K6EVjrWLq0phJdnpmH3dS/exec',
     WA_URL   : 'https://wa.me/919315596263?text=Hi%20I%20want%20to%20start%20earning',
-    VERSION  : '8.2',
+    VERSION  : '8.3',
+
+    // ── botsalesai ───────────────────────────────────────────────────
+    // Is page ka click yahan jaata hai -- metaadsflow ko nahi.
+    //
+    // Is number ke message metaadsflow se hote hue botsalesai tak jaate hain,
+    // aur ad ka poora hisaab wahin rehta hai: #CODE ka match, Meta ke events,
+    // aur roz ki report. metaadsflow beech ka pipe hai; usme Meta ka kuch nahi
+    // hai, isliye use click bhejne ka koi kaam hi nahi.
+    //
+    // (Doosra page abhi bhi metaadsflow par bhejta hai -- uske number ka
+    //  webhook ek Apps Script par jaata hai, botsalesai par nahi.)
+    AD_CLICK_URL : 'https://botsalesai.metaadsflow.com/ad-click',
+
+    // Which WhatsApp number this page sends people to. Carried on every
+    // click so the report can tell the two numbers apart -- that comparison
+    // is chatbot vs AI chat, and without this field it cannot be made.
+    WA_NUMBER : '919315596263',
+
+    // FIX-22: four characters, appended to the prefilled message. This is the
+    // only thread that survives the jump from browser to WhatsApp — the
+    // platform matches the incoming message back to this click by it.
+    CODE_ALPHABET : 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789',
+    CODE_LENGTH   : 4,
 
     TIER_HIGH : 65,
     TIER_MED  : 40,
@@ -1139,6 +1165,7 @@ footer{
     utmCampaign     : '',
     connectionSpeed : 'unknown',
     eventsCount     : 0,
+    leadCode    : '',
     waClicked       : false,
     _busy           : false,
   };
@@ -1256,12 +1283,12 @@ footer{
     // Still can't hang the page: resolveClientIp() self-resolves within 800ms
     // even if the ipify call is slow, blocked, or fails outright.
     await resolveClientIp();
-    fetchWeights();
     initTimeBuckets();
     initScrollTracking();
     initSectionTracking();
     initCopyDetection();
     initExitIntent();
+    stampLeadCode();
     initButtonBindings();
     sendOpenEvent();
 
@@ -1274,22 +1301,16 @@ footer{
   // ═══════════════════════════════════════════════════════════════════
   //  WEIGHT FETCH
   // ═══════════════════════════════════════════════════════════════════
-  function fetchWeights() {
-    if (!CFG.GAS_URL || CFG.GAS_URL === 'YOUR_GAS_ENDPOINT_HERE') return;
-    fetch(CFG.GAS_URL + '?action=get_weights')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data && data.weights && typeof data.weights === 'object') {
-          Object.keys(data.weights).forEach(function (k) {
-            if (k in CFG.WEIGHTS && typeof data.weights[k] === 'number' &&
-                data.weights[k] >= 0 && data.weights[k] <= 1) {
-              CFG.WEIGHTS[k] = data.weights[k];
-            }
-          });
-          console.log('[v8.2] Weights loaded:', data.source);
-        }
-      }).catch(function () {});
-  }
+  // fetchWeights() hata diya gaya.
+  //
+  // Wo scoring ke 'seekhe hue' weights Apps Script se mangwata tha -- aur wo
+  // weights un hi rows se seekhe gaye the jinhe haath se "Converted? YES" likha
+  // gaya tha. Yani system apne hi likhe hue jawab se seekh raha tha, aur bahar
+  // se koi sachai us loop mein kabhi aayi hi nahi. 77 "customers" mein HIGH tier
+  // ZERO nikla -- us engine ne 25,739 event dekh kar bhi ek kharidne wala nahi
+  // pehchana.
+  //
+  // Ab koi score Meta tak jata hi nahi, isliye weights ki zaroorat bhi nahi.
 
   // ═══════════════════════════════════════════════════════════════════
   //  TIME BUCKETS — EngagedUser at 30s (CAPI handled by backend)
@@ -1463,8 +1484,14 @@ footer{
       try {
         var cached = sessionStorage.getItem('ak_ip');
         if (cached) { STATE.clientIp = cached; return finish(); }
-        fetch('https://api64.ipify.org?format=json', { mode: 'cors' })
-          .then(function (r) { return r.json(); })
+        // ipify ki call hata di gayi.
+        //
+        // Do wajah. Ek: visitor ka IP ab server khud dekh leta hai
+        // (`POST /ad-click` request ke header se) -- jo zyada sach hai, kyunki
+        // page ka bheja hua IP koi bhi badal sakta hai. Do: wo ek TEESRI jagah
+        // thi jahan har visitor ki request jati thi, bina kisi faayde ke.
+        Promise.resolve()
+          .then(function () { return {}; })
           .then(function (j) {
             if (j && typeof j.ip === 'string' && j.ip.length <= 45) {
               STATE.clientIp = j.ip;
@@ -1561,6 +1588,27 @@ footer{
   // ═══════════════════════════════════════════════════════════════════
   //  BUTTON BINDINGS — mobile-safe
   // ═══════════════════════════════════════════════════════════════════
+  // FIX-22: one code per visit, written into every WhatsApp link on the page.
+  // Ambiguous glyphs (0/O, 1/I) are left out of the alphabet — this code gets
+  // read back off a message a human may have retyped.
+  function makeLeadCode() {
+    var a = CFG.CODE_ALPHABET, out = '';
+    for (var i = 0; i < CFG.CODE_LENGTH; i++) {
+      out += a.charAt(Math.floor(Math.random() * a.length));
+    }
+    return out;
+  }
+
+  function stampLeadCode() {
+    STATE.leadCode = makeLeadCode();
+    document.querySelectorAll('a[data-wa="1"]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (href && href.indexOf('%23') === -1) {
+        a.setAttribute('href', href + '%20%23' + STATE.leadCode);
+      }
+    });
+  }
+
   function initButtonBindings() {
     document.querySelectorAll('[data-wa="1"]').forEach(function (el) {
       var label = el.getAttribute('data-wa-src') || el.id || 'btn';
@@ -1574,18 +1622,20 @@ footer{
         if (e.target === el || el.contains(e.target)) STATE.hoverStartMs = Date.now();
       }, { passive: true });
 
-      el.addEventListener('touchend', function (e) {
-        e.preventDefault();
+      // FIX-22: one handler, and it never calls preventDefault().
+      //
+      // The old code bound BOTH touchend and click and cancelled the default
+      // on each, then tried to open WhatsApp itself 350ms later. That put the
+      // handoff at the mercy of the popup blocker — and in an in-app browser
+      // a delayed window.open is exactly what gets blocked. It also fired the
+      // handler twice for a single tap on any browser that let both through.
+      //
+      // The element is an <a href> now. The browser performs the navigation,
+      // which no blocker interferes with, and it still works if this script
+      // never runs at all. Enter/Space need no handler either — an anchor
+      // activates on both natively.
+      el.addEventListener('click', function () {
         goWA(label);
-      }, { passive: false });
-
-      el.addEventListener('click', function (e) {
-        e.preventDefault();
-        goWA(label);
-      });
-
-      el.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goWA(label); }
       });
     });
   }
@@ -1628,31 +1678,28 @@ footer{
                 '| testi:', STATE.testiDwellS.toFixed(1) + 's',
                 '| hesit:', STATE.hesitationMs + 'ms');
 
-    // 1. Meta Pixel — ONE event, same eventId as CAPI
+    // 1. Meta Pixel — is click ka apna event. 'Lead' NAHI.
     //
-    // FIX-16: a 3-second bouncer who taps WhatsApp used to fire a full "Lead"
-    // here. Meta then learned "find more people who tap WhatsApp" and went
-    // looking for more bouncers. Junk now fires a custom event that Meta does
-    // not optimise on, so only genuinely engaged visitors shape the audience.
+    // Yahan pehle fbq('track','Lead') tha, har tap par. Ab 'Lead' sirf ek
+    // jagah se jaata hai — metaadsflow ki CAPI se, aur tabhi jab koi sach me
+    // WhatsApp par message bhejta hai.
     //
-    // The server recomputes the score authoritatively and makes the same call.
-    // If the two ever disagree, the client scores LOWER than the server, so the
-    // worst case is a Pixel event missing for a Lead the CAPI still delivers —
-    // never a junk click being reported to Meta as a Lead.
+    // Dono ka 'Lead' bhejna sabse badi galti hoti. Pixel ka event_id aur
+    // platform ka event_id alag hain, to Meta dedupe nahi kar pata aur DONO
+    // ginta hai: ~50 tap se + ~31 asli message se. Optimization phir usi
+    // tap par chala jaata jise theek karne ke liye yeh poora kaam hua hai.
+    //
+    // ClickWA custom event hai, isliye Meta uspar optimize nahi karta —
+    // dikhta hai, ginta nahi. Events Manager me ClickWA aur Lead ka farak
+    // wahi baat batata hai jo dashboard par unclaimed_clicks aur leads ka
+    // farak batata hai: kitne log button dabate hain par message nahi bhejte.
+    //
+    // value/currency jaan-boojh kar nahi bheje ja rahe. Rupaya Meta ko tabhi
+    // jaana chahiye jab sach me aaya ho, aur woh chat ke Sale card se jaata
+    // hai — andaaze se nahi.
     if (typeof fbq === 'function') {
       try {
-        if (gateScore() >= CFG.TIER_LOW) {
-          fbq('track', 'Lead', {
-            value    : value,
-            currency : 'INR',
-            eventID  : eventId,   // FIX-2: same ID as CAPI below
-          });
-          // Contact fires separately — no value, no currency (it's not a lead event)
-          fbq('track', 'Contact', { eventID: eventId + '_contact' });
-        } else {
-          // No value, no currency — must stay out of value optimisation
-          fbq('trackCustom', 'LowIntentClick', { eventID: eventId });
-        }
+        fbq('trackCustom', 'ClickWA', { eventID: eventId });
       } catch (_) {}
     }
 
@@ -1665,10 +1712,10 @@ footer{
       sections   : STATE.sectionsViewed.join(','),
     });
 
-    // 3. Open WhatsApp
-    setTimeout(function () {
-      window.open(CFG.WA_URL, '_blank', 'noopener,noreferrer');
-    }, 350);
+    // 3. WhatsApp opens because the element is a link and the browser is
+    //    already following it. Nothing to do here — and nothing that a popup
+    //    blocker can refuse. sendBeacon above survives the navigation.
+
   }
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1693,12 +1740,20 @@ footer{
   }
 
   // ═══════════════════════════════════════════════════════════════════
-  //  SEND TO GAS
-  //  FIX-6: Both sendBeacon and fetch use text/plain Content-Type.
-  //  fbc and fbp sent as raw values (no modifications).
+  //  EVENT BANAO, AUR BHEJO
+  //
+  //  Naam `sendToGAS` isliye bacha hai ki use chaar jagah se bulaya jata hai
+  //  aur ek naam badalne ke chakkar mein ek call site chhoot jana asli khatra
+  //  hai. Par ab yeh Apps Script ko kuch nahi bhejta -- payload banata hai aur
+  //  `sendAdClick()` ko de deta hai.
+  //
+  //  YAHAN EK PEHRA HATAYA GAYA HAI, AUR WO CHUP-CHAAP SAB BAND KAR DETA.
+  //  Pehli line thi `if (!CFG.GAS_URL) return;`. `CFG.GAS_URL` ab hai hi nahi,
+  //  to yeh function apni pehli line par hi laut jata -- aur uske ant mein
+  //  baitha `sendAdClick()` kabhi chalta hi nahi. Page bilkul theek dikhta,
+  //  button WhatsApp khol deta, aur botsalesai ko EK BHI click na pahunchta.
   // ═══════════════════════════════════════════════════════════════════
   async function sendToGAS(eventName, buttonId, eventId, extras) {
-    if (!CFG.GAS_URL || CFG.GAS_URL === 'YOUR_GAS_ENDPOINT_HERE') return;
     if (STATE.eventsCount > 25) return;
     STATE.eventsCount++;
 
@@ -1735,6 +1790,8 @@ footer{
       // FIX-4 applied: raw fbclid (percent-encoded as-is from URL)
       fbclid       : STATE.rawFbclid,  // raw, for logging only (GAS does NOT modify it)
 
+      click_code   : STATE.leadCode,   // FIX-22: matches this click to the message
+      wa_number    : CFG.WA_NUMBER,    // which of the two numbers this page uses
       device_type  : getDeviceType(),
       language     : navigator.language || '',
       connection   : STATE.connectionSpeed,
@@ -1762,7 +1819,6 @@ footer{
     }
 
     var body = JSON.stringify(payload);
-    var sent = false;
 
     // FIX-21 [META DIAGNOSTIC — "server sending fewer Lead events than pixel"]:
     //   The Lead is the money event. sendBeacon can silently fail to deliver
@@ -1774,30 +1830,80 @@ footer{
     //   event_name, so two POSTs can never become two Meta Leads — but the odds
     //   of at least one landing go way up. Non-critical events keep the cheap
     //   beacon-then-fallback path so we don't double GAS traffic for everything.
-    var critical = (eventName === 'Lead');
+    // FIX-22: the second channel is gone.
+    //
+    // Firing sendBeacon AND fetch for the same Lead was meant as insurance.
+    // The server dedupes on event_id, but that check reads a cache with no
+    // lock, so two POSTs arriving ~0.4s apart both saw it empty and both went
+    // through. Measured across 52 days: 1,013 pairs of byte-identical rows —
+    // every WhatsApp click counted twice, in the sheet and in Ads Manager.
+    // APPS SCRIPT KA RAASTA YAHAN SE HATA DIYA GAYA HAI, AUR YEH ZAROORI THA.
+    //
+    // Wo script (`Lubna_Code.gs`) ke paas wahi Pixel hai -- 1561758035693379 --
+    // jispar ab botsalesai bhejta hai. Dono chalu rehte to Meta ko EK HI dataset
+    // mein har click ke DO Lead jate:
+    //
+    //     Apps Script se : Lead + value = Rs 50 + 450 x (score/100)   <- BANAYA HUA
+    //     botsalesai se  : Lead, bina value                           <- SACH
+    //
+    // Wo banaya hua rupaya 52 din tak Meta ko khilaya gaya tha -- kul Rs 16,010,
+    // jo kisi ne kabhi diya hi nahi. Yahi wo bimari hai jise theek karne ke liye
+    // poora kaam hua, aur dono raaste khule chhodne se wo pehle hi din laut aati.
+    //
+    // Sheet ab bhi bharegi -- par botsalesai se, jahan ginti sach hai.
+    sendAdClick(eventName);
+  }
 
-    // Primary: sendBeacon
-    if (typeof navigator.sendBeacon === 'function') {
-      try {
-        sent = navigator.sendBeacon(
-          CFG.GAS_URL,
-          new Blob([body], { type: 'text/plain;charset=UTF-8' })
-        );
-      } catch (_) { sent = false; }
-    }
+  // ═══════════════════════════════════════════════════════════════════
+  //  AD CLICK BEACON -> botsalesai
+  // ═══════════════════════════════════════════════════════════════════
+  //
+  // Apps Script ke send ke saath chalta hai, uski jagah nahi. Do hafte dono
+  // chalenge -- yahi ek tareeka hai purane ko band karne se pehle uske numbers
+  // milane ka.
+  //
+  // Sirf wahi saat field jinhe server sach mein rakhta hai. Upar wale payload
+  // ka baaki sab -- score, fingerprint, dwell, scroll -- server par gir jaata
+  // hai, aur 4 KB se bada body woh padhta hi nahi. Poora bhejna matlab click
+  // khone ka khatra, bina kisi faayde ke.
+  //
+  // user_agent aur IP yahan se NAHI bheje jaate: dono request ke header mein
+  // pehle se hain, aur wahan se lena us cheez par bharosa na karna hai jise koi
+  // bhi badal sakta hai.
+  //
+  // Wrapped whole: this is measurement. If any of it throws, the visitor is
+  // already on their way to WhatsApp and must not notice.
+  function sendAdClick(eventName) {
+    try {
+      if (eventName !== 'ClickWA' && eventName !== 'Lead') return;
+      if (!CFG.AD_CLICK_URL) return;
+      if (!STATE.leadCode) return;
 
-    // FIX-6 / FIX-21: fetch as a fallback for every event, and ALWAYS as a
-    // second channel for the Lead even when the beacon reported success.
-    if (!sent || critical) {
-      try {
-        await fetch(CFG.GAS_URL, {
-          method     : 'POST',
-          body       : body,
-          keepalive  : true,
-          headers    : { 'Content-Type': 'text/plain;charset=UTF-8' },
-        });
-      } catch (_) {}
-    }
+      var body = JSON.stringify({
+        click_code   : STATE.leadCode,
+        fbp          : STATE.fbp || '',
+        fbc          : STATE.fbc || '',
+        page_url     : window.location.href,
+        wa_number    : CFG.WA_NUMBER,
+        utm_source   : STATE.utmSource || '',
+        utm_campaign : STATE.utmCampaign || ''
+      });
+
+      // text/plain keeps this a simple request: a JSON content-type would
+      // trigger a CORS preflight, and a beacon fired during navigation has
+      // no time for the extra round trip.
+      if (typeof navigator.sendBeacon === 'function') {
+        if (navigator.sendBeacon(CFG.AD_CLICK_URL, new Blob([body], { type: 'text/plain;charset=UTF-8' }))) return;
+      }
+
+      fetch(CFG.AD_CLICK_URL, {
+        method    : 'POST',
+        body      : body,
+        keepalive : true,
+        mode      : 'cors',
+        headers   : { 'Content-Type': 'text/plain;charset=UTF-8' }
+      }).catch(function () {});
+    } catch (_) {}
   }
 
   // ═══════════════════════════════════════════════════════════════════
